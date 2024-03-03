@@ -264,6 +264,10 @@ i {
   flex-direction: column;
   justify-content: space-around;
   align-items: space-between;
+  padding: auto;
+}
+.strategy .hexagon-img {
+  display: none;
 }
 .vertical-line-s {
   /* border: 2px solid green; */
@@ -300,12 +304,17 @@ i {
 }
 .strategy .s-content h3,
 .strategy .s-content span {
+  /* border: 2px solid red; */
   color: var(--txt-primary);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.5rem;
   font-family: 'Times New Roman', Times, serif;
+}
+.strategy .s-content h3 {
+  padding: 0rem;
+  margin-top: 2rem;
 }
 .strategy .s-content span {
   color: var(--txt-special);
@@ -1097,6 +1106,13 @@ form button {
     text-align: left;
   }
   /* Strategy ************** */
+  .strategy {
+    padding: 5rem;
+  }
+  .strategy .hexagon-img {
+    /* border: 2px solid red; */
+    display: block;
+  }
   .strategy .s-content,
   .strategy .hexagon-container {
     display: none;
@@ -1304,7 +1320,8 @@ form button {
     /* border: 2px solid yellow; */
     display: grid;
     grid-template-columns: 30% 10% 60%;
-    grid-template-rows: 75% 10% 15%;
+    grid-template-rows: 70% 15% 15%;
+    grid-row-gap: 2rem;
   }
   .footer .social {
     /* border: 2px solid teal; */
@@ -1434,18 +1451,21 @@ form button {
     position: relative;
     z-index: 1;
   }
-  .strategy::before {
+  .strategy .hexagon-img {
+    display: block;
+  }
+  /* .strategy::before {
     content: '';
     position: absolute;
     top: 5rem;
     left: 12rem;
     width: 80%;
     height: 80%;
-    background: url(../images/strategies_hexa.png) center/cover; /* Replace with your desired background image or color */
+    background: url(../images/strategies_hexa.png) center/cover;
     background-repeat: no-repeat;
-    opacity: 1; /* Adjust the opacity as needed */
+    opacity: 1;
     z-index: -1;
-  }
+  } */
   .strategy .s-content,
   .strategy .hexagon-container {
     display: none;
@@ -1654,6 +1674,7 @@ form button {
     display: grid;
     grid-template-columns: 30% 10% 60%;
     grid-template-rows: 75% 10% 15%;
+    grid-row-gap: 2rem;
   }
   .footer .social {
     /* border: 2px solid teal; */
@@ -1782,18 +1803,22 @@ form button {
     position: relative;
     z-index: 1;
   }
-  .strategy::before {
+  .strategy .hexagon-img {
+    /* border: 5px solid green; */
+    display: block;
+  }
+  /* .strategy::before {
     content: '';
     position: absolute;
     top: 5rem;
     left: 12rem;
     width: 80%;
     height: 80%;
-    background: url(../images/strategies_hexa.png) center/cover; /* Replace with your desired background image or color */
+    background: url(../images/strategies_hexa.png) center/cover;
     background-repeat: no-repeat;
-    opacity: 1; /* Adjust the opacity as needed */
+    opacity: 1;
     z-index: -1;
-  }
+  } */
   .strategy .s-content,
   .strategy .hexagon-container {
     display: none;
@@ -2002,6 +2027,7 @@ form button {
     display: grid;
     grid-template-columns: 30% 10% 60%;
     grid-template-rows: 75% 10% 15%;
+    grid-row-gap: 2rem;
   }
   .footer .social {
     /* border: 2px solid teal; */
