@@ -2434,3 +2434,10 @@ form button {
     font-weight: 300;
   }
 }
+
+/* Future Proofing */
+.stra-body .body-item-1::before,
+.stra-body .body-item-2::before,
+.stra-body .body-item-3::before {
+  color: transparent;
+}
