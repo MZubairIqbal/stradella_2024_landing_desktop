@@ -41,14 +41,27 @@
           <div class="nav-links">
             <ul>
               <li class="list">
-                <div class="item item-1"><a href="#">Home</a></div>
-                <div class="item item-2"><a href="#">About</a></div>
-                <div class="item item-3"><a href="#">Services</a></div>
-                <div class="item item-4"><a href="#">Contact</a></div>
+                <div class="item active item-1">
+                  <a href="#">Home</a>
+                  <div class="l-line"></div>
+                </div>
+                <div class="item item-2">
+                  <a href="#">About</a>
+                  <div class="l-line"></div>
+                </div>
+                <div class="item item-3">
+                  <a href="#">Services</a>
+                  <div class="l-line"></div>
+                </div>
+                <div class="item item-4">
+                  <a href="#">Contact</a>
+                  <div class="l-line"></div>
+                </div>
                 <div class="item item-5">
                   <a href="#"
                     >Investments <i class="fa-solid fa-chevron-down"></i
                   ></a>
+                  <div class="l-line"></div>
                 </div>
               </li>
             </ul>
@@ -112,10 +125,21 @@
     </section>
     <!-- Article Section End's Here  -->
     <section class="strategy" id="strategy_section">
+      <div class="stra-head">
+        <h2 class="stradella_incor">STRADELLA INCORPORATES</h2>
+        <h2 class="stradella_three">
+          ALL <span class="txt-special">THREE STRATEGIES</span>
+        </h2>
+      </div>
       <img
-        src="assets/images/strategies_hexa.png"
+        src="assets/images/hexagon_big.png"
         alt="hexagon-img"
         class="hexagon-img" />
+      <div class="stra-body">
+        <h3 class="body-item body-item-1">EQUITY</h3>
+        <h3 class="body-item body-item-2">MANAGEMENT</h3>
+        <h3 class="body-item body-item-3">HYBRID</h3>
+      </div>
       <div class="s-content container">
         <h3>STRADELLA</h3>
         <h3>INCORPORATES</h3>
@@ -269,53 +293,58 @@
         <div class="line"></div>
       </div>
     </section>
-    <!-- Grid Combination ***** -->
-    <div class="grid-combo">
-      <!-- Contact Us Section Starts Here  -->
-      <section class="contacts" id="contacts_section">
-        <div class="container">
-          <div class="heading">
-            <h2>CONTACT US</h2>
+    <div class="big-wraper">
+      <!-- Grid Combination ***** -->
+      <div class="grid-combo" style="">
+        <!-- Contact Us Section Starts Here  -->
+        <section class="contacts" id="contacts_section">
+          <div class="container">
+            <div class="heading">
+              <h2>CONTACT US</h2>
+            </div>
+            <div class="form-box">
+              <div class="line"></div>
+              <form action="backEnd.php">
+                <input type="text" placeholder="First Name" />
+                <input type="text" placeholder="Last Name" />
+                <input type="email" placeholder="E-Mail" />
+                <input type="number" placeholder="Telephone" />
+                <textarea
+                  placeholder="Comments..."
+                  name=""
+                  class="mt-4 py-4 px-2"
+                  id="form-text-area"
+                  cols="30"
+                  rows="5"></textarea>
+                <button class="mt-4 mb-4" type="submit">Submit</button>
+              </form>
+            </div>
           </div>
-          <div class="form-box">
+        </section>
+        <!-- Sign Up Section's Markup -->
+        <section class="sign-up" id="sign-up-section">
+          <div class="container">
+            <div class="heading">
+              <h3 class="">SIGN UP</h3>
+            </div>
             <div class="line"></div>
-            <form action="backEnd.php">
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="email" placeholder="E-Mail" />
-              <input type="number" placeholder="Telephone" />
-              <textarea
-                placeholder="Comments..."
+            <div class="content-box">
+              <h5 class="">Sign Up For E-Mail Updates</h5>
+              <p>
+                Stay in touch to benefit from the insights of one of the world
+                leaders in real estate investment management.
+              </p>
+              <input
+                type="email"
                 name=""
-                class="mt-4 py-4 px-2"
-                id="form-text-area"
-                cols="30"
-                rows="5"></textarea>
-              <button class="mt-4 mb-4" type="submit">Submit</button>
-            </form>
+                id="signUp-mail"
+                placeholder="E-Mail" />
+              <button class="signUp-btn">Subscribe</button>
+            </div>
           </div>
-        </div>
-      </section>
-      <!-- Sign Up Section's Markup -->
-      <section class="sign-up" id="sign-up-section">
-        <div class="container">
-          <div class="heading">
-            <h3 class="">SIGN UP</h3>
-          </div>
-          <div class="line"></div>
-          <div class="content-box">
-            <h5 class="">Sign Up For E-Mail Updates</h5>
-            <p>
-              Stay in touch to benefit from the insights of one of the world
-              leaders in real estate investment management.
-            </p>
-            <input type="email" name="" id="signUp-mail" placeholder="E-Mail" />
-            <button class="signUp-btn">Subscribe</button>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-
     <footer class="footer" id="footer_section">
       <div class="footer-cont">
         <div class="social">

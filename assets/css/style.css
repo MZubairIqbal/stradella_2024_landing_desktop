@@ -9,7 +9,6 @@
   color: var(--txt-primary);
   font-family: 'Poppins', sans-serif;
 }
-
 :root {
   --txt-primary: #fff;
   --txt-secondary: #000;
@@ -23,6 +22,7 @@ html {
 
 body {
   /* border: 2px solid red; */
+  overflow-x: hidden;
   font-size: 1.6rem;
   background: var(--bg-primary);
 }
@@ -40,12 +40,6 @@ img {
 
 i {
   color: #4caf4f;
-}
-* {
-  boder: 2px solid greenyellow;
-}
-*:hover {
-  boder: 2px solid red;
 }
 /* Custom Css Starts from Here ********* */
 .main {
@@ -266,6 +260,12 @@ i {
   align-items: space-between;
   padding: auto;
 }
+.strategy .stra-head {
+  display: none;
+}
+.strategy .stra-body {
+  display: none;
+}
 .strategy .hexagon-img {
   display: none;
 }
@@ -306,15 +306,15 @@ i {
 .strategy .s-content span {
   /* border: 2px solid red; */
   color: var(--txt-primary);
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: 0.5rem;
   font-family: 'Times New Roman', Times, serif;
 }
 .strategy .s-content h3 {
   padding: 0rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .strategy .s-content span {
   color: var(--txt-special);
@@ -325,7 +325,7 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
-  padding: 2rem 1rem;
+  padding: 0.5rem 1rem auto 1rem;
   min-height: 70vh;
   width: 80%;
   /* gap: 2rem; */
@@ -341,7 +341,7 @@ i {
 .wraper h2 {
   /* border: 2px solid red; */
   font-family: 'Times New Roman', Times, serif;
-  font-size: 1.7rem;
+  font-size: 3rem;
   letter-spacing: 0.2rem;
   color: var(--txt-special);
   font-weight: 400;
@@ -349,6 +349,9 @@ i {
   margin-left: 1rem;
   margin-bottom: 2rem;
   /* padding-left: 3rem; */
+}
+.wraper img {
+  /* border: 2px solid red; */
 }
 .hexagon::before {
   position: absolute;
@@ -642,10 +645,16 @@ i {
   width: 0;
   margin: auto;
 }
+/* Grid Combo's CSS  */
+.grid-combo {
+  /* border: 2px solid red; */
+  border: 2px solid white;
+  padding: 0 0;
+}
 /* Contacts Section's CSS  */
 .contacts {
   /* border: 2px solid red; */
-  border-top: 2px solid white;
+  /* border-top: 2px solid white; */
 }
 .contacts .container {
   /* border: 2px solid green; */
@@ -799,11 +808,12 @@ form button {
 }
 .legal-box .upper,
 .legal-box .lower {
+  /* border: 2px solid yellow; */
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .legal-box .upper span,
 .legal-box .lower span {
@@ -814,7 +824,7 @@ form button {
 .legal-box .upper a,
 .legal-box .lower a {
   color: gray;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 /* Footer's CSS ******* */
 .footer {
@@ -1053,12 +1063,51 @@ form button {
   padding-left: 8rem;
 }
 /* Break Points Large Screens */
+@media only screen and (max-width: 320px) {
+  .strategy .s-content h3,
+  .strategy .s-content span {
+    /* background-color: white; */
+    font-size: 1.8rem !important;
+    letter-spacing: 0.2rem;
+  }
+  .wraper h2 {
+    font-size: 1.6rem;
+  }
+  .wraper:nth-child(2) h2 {
+    font-size: 1.4rem;
+  }
+  .investment .second a:last-child,
+  .legal-box .upper a,
+  .legal-box .lower a {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .strategy .s-content h3,
+  .strategy .s-content span {
+    font-size: 2.5rem;
+  }
+  .wraper h2 {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sign-up {
+    padding-bottom: 2rem;
+  }
+}
 @media only screen and (min-width: 768px) {
   body {
     /* display: none; */
   }
   .nav-links {
     display: block;
+  }
+  .nav-links .list .item.active .l-line {
+    height: 1px;
+    width: 50%;
+    background: var(--txt-special);
+    margin: auto;
   }
   .hero .content h2 {
     font-size: 6rem;
@@ -1109,6 +1158,80 @@ form button {
   .strategy {
     padding: 5rem;
   }
+  .strategy .stra-head {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-bottom: 4rem; */
+  }
+  .stra-head h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+  }
+  .stra-head h2 span {
+    font-family: 'Times New Roman', Times, serif;
+    color: #f9b310;
+  }
+  .strategy .stra-body {
+    /* border: 2px solid rgb(0, 34, 255); */
+    display: flex;
+    justify-content: space-between;
+  }
+  .stra-body .body-item {
+    /* border: 2px solid red; */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    color: var(--txt-special);
+    font-weight: 400;
+    letter-spacing: 0.7rem;
+    line-height: 1.5;
+  }
+  .stra-body .body-item-1 {
+    /* border: 2px solid orange; */
+    position: relative;
+  }
+  .stra-body .body-item-1::before {
+    content: '01';
+    position: absolute;
+    top: -24rem;
+    left: 3.5rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    color: var(--txt-special);
+  }
+  .stra-body .body-item-2 {
+    /* border: 2px solid rgb(43, 226, 43); */
+    position: relative;
+  }
+  .stra-body .body-item-2::before {
+    content: '02';
+    position: absolute;
+    top: -24rem;
+    left: 13rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    color: var(--txt-special);
+  }
+  .stra-body .body-item-3 {
+    /* border: 2px solid rgb(43, 226, 43); */
+    position: relative;
+  }
+  .stra-body .body-item-3::before {
+    content: '03';
+    position: absolute;
+    top: -24rem;
+    left: 9.5rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    color: var(--txt-special);
+  }
   .strategy .hexagon-img {
     /* border: 2px solid red; */
     display: block;
@@ -1129,6 +1252,8 @@ form button {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
   .cards .card-wraper .card1 {
     align-self: start;
@@ -1191,10 +1316,10 @@ form button {
   .solution::after {
     content: '';
     position: absolute;
-    top: 95px;
+    top: 160px;
     left: -141px;
     width: 85vw;
-    height: 90vh;
+    height: 70vh;
     border: 2px solid white;
     z-index: -2;
   }
@@ -1225,18 +1350,27 @@ form button {
   .slider .container::after {
     content: '';
     position: absolute;
-    top: -15px;
+    top: 15px;
     left: 15px;
     width: 100%;
     height: 100%;
     border: 2px solid white;
     z-index: -2;
   }
+  /* Big Wraper ********* */
+  .big-wraper {
+    /* border: 2px solid blue; */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 2rem;
+  }
   /* grid combo (contact us and sign up forms) */
   .grid-combo {
     /* border: 2px solid red; */
+    border: 2px solid white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 0;
   }
   .grid-combo .contacts form {
     /* border: 2px solid green; */
@@ -1246,7 +1380,7 @@ form button {
     padding: 1rem 4rem;
   }
   .contacts .heading h2 {
-    font-size: 5rem;
+    font-size: 3rem;
   }
   .contacts form textarea {
     /* border: 2px solid blue; */
@@ -1268,7 +1402,7 @@ form button {
   /* Sign Up ************* */
   .sign-up .container {
     /* border: 2px solid red; */
-    padding: 5rem;
+    padding: 5rem 0;
     height: 100%;
   }
   .sign-up .content-box h5 {
@@ -1279,16 +1413,16 @@ form button {
     margin: auto;
   }
   .sign-up .content-box input {
-    width: 40%;
+    width: 80%;
     padding: 1rem;
     color: black;
   }
   .sign-up .content-box button {
-    width: 40%;
+    width: 80%;
     padding: 1rem;
   }
   .sign-up .heading h3 {
-    font-size: 5rem;
+    font-size: 3rem;
   }
   .sign-up .content-box button:hover {
     background: #edebebcb;
@@ -1320,8 +1454,8 @@ form button {
     /* border: 2px solid yellow; */
     display: grid;
     grid-template-columns: 30% 10% 60%;
-    grid-template-rows: 70% 15% 15%;
-    grid-row-gap: 2rem;
+    grid-template-rows: 70% 1fr 1fr 1fr;
+    grid-row-gap: 1rem;
   }
   .footer .social {
     /* border: 2px solid teal; */
@@ -1346,13 +1480,15 @@ form button {
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    min-height: 50%;
+    align-self: center;
   }
   .footer-grid .investment {
     /* border: 2px solid yellow; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin: 0;
+    margin-top: 0;
   }
   .footer-grid .investment .first,
   .footer-grid .investment .second {
@@ -1361,14 +1497,16 @@ form button {
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    align-self: center;
+    max-height: 60%;
   }
   .footer-grid .investment .second {
-    padding-top: 5rem;
+    padding-top: 10rem;
   }
   .footer-grid .information a h4,
   .footer-grid .investment .first a h4 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 0.3rem;
   }
@@ -1385,6 +1523,14 @@ form button {
   .footer-cont .legal-box {
     /* border: 2px solid blue; */
     grid-column: span 3;
+  }
+  .legal-box .upper {
+    /* border: 2px solid red; */
+    gap: 1rem;
+  }
+  .legal-box .upper a,
+  .legal-box .lower a {
+    font-size: 1.2rem;
   }
   .footer-cont .copy-right {
     /* border: 2px solid red; */
@@ -1450,6 +1596,80 @@ form button {
     /* border: 2px solid red; */
     position: relative;
     z-index: 1;
+  }
+  .strategy .stra-head {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  .stra-head h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+  }
+  .stra-head h2 span {
+    font-family: 'Times New Roman', Times, serif;
+    color: #f9b310;
+  }
+  .strategy .stra-body {
+    /* border: 2px solid rgb(0, 34, 255); */
+    display: flex;
+    justify-content: space-between;
+  }
+  .stra-body .body-item {
+    /* border: 2px solid red; */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    color: var(--txt-special);
+    font-weight: 400;
+    letter-spacing: 0.7rem;
+    line-height: 1.5;
+  }
+  .stra-body .body-item-1 {
+    /* border: 2px solid orange; */
+    position: relative;
+  }
+  .stra-body .body-item-1::before {
+    content: '01';
+    position: absolute;
+    top: -23rem;
+    left: 5.5rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    color: var(--txt-special);
+  }
+  .stra-body .body-item-2 {
+    /* border: 2px solid rgb(43, 226, 43); */
+    position: relative;
+  }
+  .stra-body .body-item-2::before {
+    content: '02';
+    position: absolute;
+    top: -23rem;
+    left: 15.5rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    color: var(--txt-special);
+  }
+  .stra-body .body-item-3 {
+    /* border: 2px solid rgb(43, 226, 43); */
+    position: relative;
+  }
+  .stra-body .body-item-3::before {
+    content: '03';
+    position: absolute;
+    top: -23rem;
+    left: 11rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    color: var(--txt-special);
   }
   .strategy .hexagon-img {
     display: block;
@@ -1543,10 +1763,10 @@ form button {
   .solution::after {
     content: '';
     position: absolute;
-    top: 95px;
+    top: 160px;
     left: -141px;
     width: 85vw;
-    height: 90vh;
+    height: 70vh;
     border: 2px solid white;
     z-index: -2;
   }
@@ -1577,16 +1797,24 @@ form button {
   .slider .container::after {
     content: '';
     position: absolute;
-    top: -15px;
+    top: 15px;
     left: 15px;
     width: 100%;
     height: 100%;
     border: 2px solid white;
     z-index: -2;
   }
+  /* Big Wraper ********* */
+  .big-wraper {
+    /* border: 2px solid blue; */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 6rem;
+  }
   /* grid combo (contact us and sign up forms) */
   .grid-combo {
     /* border: 2px solid red; */
+    border: 2px solid white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1673,8 +1901,8 @@ form button {
     /* border: 2px solid yellow; */
     display: grid;
     grid-template-columns: 30% 10% 60%;
-    grid-template-rows: 75% 10% 15%;
-    grid-row-gap: 2rem;
+    grid-template-rows: 75% 1fr 1fr 1fr;
+    grid-row-gap: 1rem;
   }
   .footer .social {
     /* border: 2px solid teal; */
@@ -1698,13 +1926,15 @@ form button {
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    min-height: 50%;
+    align-self: center;
   }
   .footer-grid .investment {
     /* border: 2px solid yellow; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin: 0;
+    margin-top: 0;
   }
   .footer-grid .investment .first,
   .footer-grid .investment .second {
@@ -1713,9 +1943,11 @@ form button {
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    align-self: center;
+    max-height: 60%;
   }
   .footer-grid .investment .second {
-    padding-top: 5rem;
+    padding-top: 10rem;
   }
   .footer-grid .information a h4,
   .footer-grid .investment .first a h4 {
@@ -1737,6 +1969,10 @@ form button {
   .footer-cont .legal-box {
     /* border: 2px solid blue; */
     grid-column: span 3;
+  }
+  .legal-box .upper a,
+  .legal-box .lower a {
+    font-size: 1.4rem;
   }
   .footer-cont .copy-right {
     /* border: 2px solid red; */
@@ -1802,6 +2038,80 @@ form button {
     /* border: 2px solid red; */
     position: relative;
     z-index: 1;
+  }
+  .strategy .stra-head {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  .stra-head h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
+  .stra-head h2 span {
+    font-family: 'Times New Roman', Times, serif;
+    color: #f9b310;
+  }
+  .strategy .stra-body {
+    /* border: 2px solid rgb(0, 34, 255); */
+    display: flex;
+    justify-content: space-between;
+  }
+  .stra-body .body-item {
+    /* border: 2px solid red; */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    color: var(--txt-special);
+    font-weight: 400;
+    letter-spacing: 0.7rem;
+    line-height: 1.5;
+  }
+  .stra-body .body-item-1 {
+    /* border: 2px solid orange; */
+    position: relative;
+  }
+  .stra-body .body-item-1::before {
+    content: '01';
+    position: absolute;
+    top: -24rem;
+    left: 7.5rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    color: var(--txt-special);
+  }
+  .stra-body .body-item-2 {
+    /* border: 2px solid rgb(43, 226, 43); */
+    position: relative;
+  }
+  .stra-body .body-item-2::before {
+    content: '02';
+    position: absolute;
+    top: -24rem;
+    left: 18.5rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    color: var(--txt-special);
+  }
+  .stra-body .body-item-3 {
+    /* border: 2px solid rgb(43, 226, 43); */
+    position: relative;
+  }
+  .stra-body .body-item-3::before {
+    content: '03';
+    position: absolute;
+    top: -24rem;
+    left: 11rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    color: var(--txt-special);
   }
   .strategy .hexagon-img {
     /* border: 5px solid green; */
@@ -1896,10 +2206,10 @@ form button {
   .solution::after {
     content: '';
     position: absolute;
-    top: 95px;
+    top: 160px;
     left: -141px;
     width: 85vw;
-    height: 90vh;
+    height: 70vh;
     border: 2px solid white;
     z-index: -2;
   }
@@ -1930,16 +2240,24 @@ form button {
   .slider .container::after {
     content: '';
     position: absolute;
-    top: -15px;
+    top: 15px;
     left: 15px;
     width: 100%;
     height: 100%;
     border: 2px solid white;
     z-index: -2;
   }
+  /* Big Wraper ********* */
+  .big-wraper {
+    /* border: 2px solid blue; */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 15rem;
+  }
   /* grid combo (contact us and sign up forms) */
   .grid-combo {
     /* border: 2px solid red; */
+    border: 2px solid white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2026,8 +2344,8 @@ form button {
     /* border: 2px solid yellow; */
     display: grid;
     grid-template-columns: 30% 10% 60%;
-    grid-template-rows: 75% 10% 15%;
-    grid-row-gap: 2rem;
+    grid-template-rows: 75% 1fr 1fr 1fr;
+    grid-row-gap: 1rem;
   }
   .footer .social {
     /* border: 2px solid teal; */
@@ -2051,6 +2369,8 @@ form button {
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    min-height: 50%;
+    align-self: center;
   }
   .footer-grid .investment {
     /* border: 2px solid yellow; */
@@ -2066,9 +2386,11 @@ form button {
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    align-self: center;
+    max-height: 60%;
   }
   .footer-grid .investment .second {
-    padding-top: 5rem;
+    padding-top: 10rem;
   }
   .footer-grid .information a h4,
   .footer-grid .investment .first a h4 {
@@ -2090,6 +2412,10 @@ form button {
   .footer-cont .legal-box {
     /* border: 2px solid blue; */
     grid-column: span 3;
+  }
+  .legal-box .upper a,
+  .legal-box .lower a {
+    font-size: 1.6rem;
   }
   .footer-cont .copy-right {
     /* border: 2px solid red; */
