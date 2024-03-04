@@ -748,6 +748,7 @@ form button {
 }
 .content-box input {
   display: block;
+  color: var(--txt-secondary);
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -760,7 +761,7 @@ form button {
   padding: 0.5rem 2rem;
   background-color: transparent;
   border: 2px solid gray;
-  color: var(--txt-secondary);
+  color: var(--txt-secondary) !important;
   display: block;
   width: max-content;
   margin: auto;
@@ -1094,6 +1095,9 @@ form button {
 @media only screen and (max-width: 768px) {
   .sign-up {
     padding-bottom: 2rem;
+  }
+  .sign-up .content-box input {
+    color: var(--txt-secondary);
   }
 }
 @media only screen and (min-width: 768px) {
